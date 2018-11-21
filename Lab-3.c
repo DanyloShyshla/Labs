@@ -22,10 +22,10 @@ int main() {
 }
 
 void matrix_bubble_sort(int array[MATRIX_SIZE][MATRIX_SIZE]) {
-    int row, temporary_Index, column, element;
+    int row, temporary_index, column, element;
     for (row = 0; row < MATRIX_SIZE; row++) {
-        for (temporary_Index = MATRIX_SIZE - 1; temporary_Index >= 0; temporary_Index--) {
-            for (column = 0; column < temporary_Index; column++) {
+        for (temporary_index = MATRIX_SIZE - 1; temporary_index >= 0; temporary_index--) {
+            for (column = 0; column < temporary_index; column++) {
                 if (array[row][column] < array[row][column + 1]) {
                     element = array[row][column];
                     array[row][column] = array[row][column + 1];
@@ -44,14 +44,14 @@ void matrix_bubble_sort(int array[MATRIX_SIZE][MATRIX_SIZE]) {
 }
 
 void avrg_arithmetical_number(int array[MATRIX_SIZE][MATRIX_SIZE]) {
-    int row, column, next_Column;
+    int row, column, next_column;
     float avrg_arithmetical_number = 1;
     for (row = 0; row < MATRIX_SIZE; row++) {
-        next_Column = 0;
+        next_column = 0;
         for (column = 0; column < MATRIX_SIZE; column++) {
-            next_Column += array[row][column];
+            next_column += array[row][column];
         }
-        float output = (float) next_Column / MATRIX_SIZE;
+        float output = (float) next_column / MATRIX_SIZE;
         avrg_arithmetical_number = output * avrg_arithmetical_number;
 
         printf("f() = %f\n", output);
