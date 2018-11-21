@@ -7,18 +7,27 @@ void matrix_bubble_sort(int array[MATRIX_SIZE][MATRIX_SIZE]);
 
 void avrg_arithmetical_number(int array[MATRIX_SIZE][MATRIX_SIZE]);
 
-int main() {
-    int array[MATRIX_SIZE][MATRIX_SIZE] = {
-            {-12, 7,  23, 13, 4},
-            {-5,  23, 45, 67, -2},
-            {0,   15, 4,  9,  -14},
-            {1,   -4, 6,  -2, 0},
-            {3,   33, -1, 0,  -78}
+void matrixInput(int array[MATRIX_SIZE][MATRIX_SIZE]);
 
-    };
+int array[MATRIX_SIZE][MATRIX_SIZE];
+
+int main() {
+          printf("Please enter matrix with size 5x5 \n");
+               for(int row = 0; row < MATRIX_SIZE; row++)
+                    for(int column = 0; column < MATRIX_SIZE; column++)
+            scanf("%d", &array[row][column]);
     matrix_bubble_sort(array);
     avrg_arithmetical_number(array);
     return 0;
+}
+
+void matrixInput(int matrix[MATRIX_SIZE][MATRIX_SIZE]) {
+    for(int row = 0; row < MATRIX_SIZE; row++)
+    {
+        for(int column=0; column<MATRIX_SIZE; column++)
+            printf("%d\t", array[row][column]);
+        printf("\n");
+    }
 }
 
 void matrix_bubble_sort(int array[MATRIX_SIZE][MATRIX_SIZE]) {
